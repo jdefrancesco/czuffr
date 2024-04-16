@@ -58,6 +58,12 @@ func main() {
 	_ = flagCrash
 	_ = flagMutFuzz
 
+	targetArgs := flag.Args()
+	if len(targetArgs) < 2 {
+		fmt.Fprintf(os.Stderr, "[!] No target binary to fuzz was specified .")
+		os.Exit(1)
+	}
+
 	fmt.Println("Lets FUZZZ")
 
 }
