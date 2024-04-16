@@ -64,6 +64,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("Lets FUZZZ")
+	// Psuedo code for running the fuzzing
+	targetProgram := args[0]
+	targetArgs := args[1:]
+
+	//  fmt.Printf("Running %s with clifuzz options: %s\n", targetProgram, *exampleFlag)
+	//  runFuzzing(targetProgram, targetArgs)
 
 }
